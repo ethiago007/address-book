@@ -39,6 +39,7 @@ function Contact(firstName, lastName, phoneNumber) {
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 };
+
 // User Interface Logic ---------
 let addressBook = new AddressBook();
 
@@ -51,5 +52,12 @@ $(document).ready(function() {
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
     addressBook.addContact(newContact);
     console.log(addressBook.contacts);
+    $(".first-name").append(inputtedFirstName);
+    
+    $(".last-name").append(inputtedLastName);
+    $(".phone-number").append(inputtedPhoneNumber);
+    $("#show-contact").show();
+    event.preventDefault();
+
   });
 });
