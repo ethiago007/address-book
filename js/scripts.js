@@ -39,11 +39,16 @@ function Contact(firstName, lastName, phoneNumber) {
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 };
+function myFunction() {
+  document.getElementById("myForm").reset();
+}
 
 // User Interface Logic ---------
 let addressBook = new AddressBook();
 
 $(document).ready(function() {
+ 
+
   $("form#new-contact").submit(function(event) {
     event.preventDefault();
     const inputtedFirstName = $("input#new-first-name").val();
@@ -52,11 +57,14 @@ $(document).ready(function() {
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
     addressBook.addContact(newContact);
     console.log(addressBook.contacts);
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
     $(".first-name").append(inputtedFirstName);
     
     $(".last-name").append(inputtedLastName);
     $(".phone-number").append(inputtedPhoneNumber);
     $("#show-contact").show();
+    $("#show-contact h2").text(newContact.fullName());
+
     event.preventDefault();
 
   });
