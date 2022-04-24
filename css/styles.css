@@ -4,3 +4,19 @@
 h1 {
     text-align: center;
 }
+#warning {
+  display: none;
+  color: black;
+}
+#listOfAddress {
+  list-style: none;
+}
+#home {
+  display: none;
+}
+#school {
+  display: none;
+}
+#work {
+  display: none;
+}
