@@ -90,44 +90,54 @@
                             </div>
                         </div>
                     </div>
-           
-            <br> <br> <button type="submit" class="btn btn-success">Add</button>
 
-            <button type="reset" value="reset" class="btn btnreset btn-danger"
-                onclick="window.location.reload()">FORMAT!!!!</button>
-        
-        </form>
-  
-        <br> <button type="button" class="btn btn-secondary" id="workButton">Add Work Address</button>
-        <button type="button" class="btn btn-secondary" id="homeButton">Add Home Address</button>
-        <button type="button" class="btn btn-secondary" id="schoolButton">Add School Address</button>
-        </div>
-        <div class="col-md-6 col-lg-6 col-sm-6">
-            <h2>Contacts:</h2>
-            <ul id="contacts">
-            </ul>
+                    <br> <br> <button type="submit" class="btn btn-success">Add</button>
 
-            <div id="show-contact" class="result">
-                <h2></h2>
+                    <button type="reset" value="reset" class="btn btnreset btn-danger"
+                        onclick="window.location.reload()">FORMAT!!!!</button>
 
-                <p>First Name: <span class="first-name"></span></p>
-                <p>Last Name: <span class="last-name"></span></p>
-                <p>Phone Number: <span class="phone-number"></span></p>
-                <p>Email Address: <span class="email"></span></p>
-                <p>Address:
-                <ul class="addresses">
+                </form>
 
+                <br> <button type="button" class="btn btn-secondary" id="workButton">Add Work Address</button>
+                <button type="button" class="btn btn-secondary" id="homeButton">Add Home Address</button>
+                <button type="button" class="btn btn-secondary" id="schoolButton">Add School Address</button>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6">
+                <h2>Contacts:</h2>
+                <ul id="contacts">
                 </ul>
-                </p>
+
+                <div id="show-contact" class="result">
+                    <h2></h2>
+
+                    <p>First Name: <span class="first-name"></span></p>
+                    <p>Last Name: <span class="last-name"></span></p>
+                    <p>Phone Number: <span class="phone-number"></span></p>
+                    <p>Email Address: <span class="email"></span></p>
+                    <p>
+                        <li>Work Address: <span class="work-address"></span></li>
+                    </p>
+                    <p>
+                        <li>School Address: <span class="school-address"></span></li>
+                    </p>
+                    <p>
+                        <li>Home Address: <span class="home-address"></span></li>
+                    </p>
 
 
 
 
-                <div id="buttons" class="btn btn-danger">
+
+                    <!-- // $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>"); -->
+
+
+                    <div id="buttons" class="btn btn-danger">
+                    </div>
+                    <div id="buttonsEdit" class="btn btn-success"></div>
+
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </body>
 
