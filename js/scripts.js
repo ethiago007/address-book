@@ -66,12 +66,21 @@ let addressBook = new AddressBook();
 // Funtion for edit contact
 function editContact(id) {
   let contact = addressBook.findContact(id);
+  
   $("input#new-first-name").val(contact.firstName);
   $("input#new-last-name").val(contact.lastName);
   $("input#new-phone-number").val(contact.phoneNumber);
   $("input#new-email-address").val(contact.email);
-  
-  
+  $(".work-street").val(contact.workAddress.street);
+  $(".work-city").val(contact.workAddress.city);
+  $(".work-state").val(contact.workAddress.state);
+  $(".school-street").val(contact.schoolAddress.street);
+  $(".school-city").val(contact.schoolAddress.city);
+  $(".school-state").val(contact.schoolAddress.state);
+  $(".home-street").val(contact.homeAddress.street);
+  $(".home-city").val(contact.homeAddress.city);
+  $(".home-state").val(contact.homeAddress.state);
+ 
   addressBook.deleteContact(id);
   $("#show-contact").hide()
 }
@@ -236,6 +245,6 @@ $(document).ready(function () {
 
     resetFields();
     event.preventDefault();
-
+    console.log(newContact);
   });
 });
